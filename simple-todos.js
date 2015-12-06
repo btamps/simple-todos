@@ -4,6 +4,7 @@ if (Meteor.isClient) {
   // This code only runs on the client
   Template.body.helpers({
     tasks: function () {
+      // find and sort from newest first
       return Tasks.find({}, {sort: {createdAt: -1}});
     }
   });
